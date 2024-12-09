@@ -1,0 +1,492 @@
+.hero_banner {
+  .sliderContainer {
+    position: relative;
+
+    .hero-banner {
+      width: 100vw;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+
+      &.slide-1 {
+      
+        background-image: url(../images/ORo-dog-guardian-robot-bg.jpg);
+      } 
+
+      &.slide-2 {
+
+       
+        background-image: url(../images/ORo-playmate-robot-bg.jpg);
+      } 
+
+      &.slide-3 {
+
+        background-image: url(../images/ORo-pet-feeder-bg.jpg);
+
+      }
+
+      &.slide-4 {
+
+     
+        background-image: url(../images/ORo-video-calling-robot-bg.jpg);
+      } 
+
+      &.slide-5 {
+
+       
+        background-image: url(../images/ORo-vlogging-robot-bg.jpg);
+      } 
+
+      &.slide-6 {
+
+        background-image: url(../images/ORo-dog-trainer-robot-bg.jpg)
+      } 
+
+
+      .slider-text-wrap {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        flex-wrap: nowrap;
+
+        // span.paws_element {
+        //   display: inline-flex;
+        //   flex-direction: row;
+        //   justify-content: flex-start;
+        //   gap: 10px;
+
+        //   img {
+        //     width: 55px;
+        //     display: inline;
+        //     position: relative;
+        //     bottom: 0px;
+        //     height: 30px;
+        //   }
+        // }
+
+        h1 {
+          color: #08e5f8;
+          line-height: 0.8;
+          font-size: 110px;
+          font-weight: 300;
+        }
+
+        p {
+          font-size: 50px;
+          text-align: left;
+          line-height: 1.2;
+        }
+      }
+
+      @media (max-width:991px) {
+
+
+
+        .slider-text-wrap {
+
+          h1 {
+            font-size: 40px;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 24px;
+            line-height: 36px;
+            text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      @media (max-width:1524px) {
+
+        background-position: center !important;
+      }
+
+      @media (max-width:700px) {
+
+        background-position: top center !important;
+        
+        background-size: 100% auto !important;
+        // height: calc(100vh - 180px);
+        height: 550px;
+
+        &.slide-1 {
+      
+          background-image: url(../images/hero-mobile/ORo-dog-guardian-robot-bg-mobile.jpg);
+        } 
+  
+        &.slide-2 {
+  
+         
+          background-image: url(../images/hero-mobile/ORo-playmate-robot-bg-mobile.jpg);
+        } 
+  
+        &.slide-3 {
+  
+          background-image: url(../images/hero-mobile/ORo-pet-feeder-bg-mobile.jpg);
+  
+        }
+  
+        &.slide-4 {
+  
+       
+          background-image: url(../images/hero-mobile/ORo-video-calling-robot-bg-mobile.jpg);
+        } 
+  
+        &.slide-5 {
+  
+         
+          background-image: url(../images/hero-mobile/ORo-vlogging-robot-bg-mobile.jpg);
+        } 
+  
+        &.slide-6 {
+  
+          background-image: url(../images/hero-mobile/ORo-dog-trainer-robot-bg-mobile.jpg);
+        } 
+      }
+
+     
+    }
+  }
+
+  .slider {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+
+  .slick-slide {
+    color: white;
+    font-size: 30px;
+    font-family: "Arial", "Helvetica";
+    text-align: center;
+  }
+
+  .progressBarContainer {
+    position: absolute;
+    bottom: 25px;
+    // width: 300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    width: auto;
+    max-width: fit-content;
+    gap: 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 16px;
+    border-radius: 20px;
+
+    div {
+      display: block;
+      width: 80px;
+      padding: 0;
+      cursor: pointer;
+      float: left;
+      color: white;
+      height: 80px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      span {
+        &.progressBar {
+          width: 100%;
+          height: 80px;
+          background-color: rgba(255, 255, 255, 0.4);
+          display: block;
+          border-radius: 20px;
+          overflow: hidden;
+
+          .inProgress {
+            background-color: rgb(253 174 120 / 50%);
+            width: 0%;
+            height: 80px;
+          }
+        }
+      }
+    }
+
+    .item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      transition: transform 1s;
+
+      // &:hover {
+      //   transform: scale(1.2);
+      // }
+      .loader-content {
+        position: absolute;
+        color: #000;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        bottom: 1px;
+        text-decoration: none;
+
+        img {
+          width: 24px;
+        }
+
+        h2 {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .slick-next {
+      right: 20px;
+      display: none !important;
+    }
+
+    .slick-prev {
+      left: 20px;
+      display: none !important;
+    }
+
+    @media (max-width: 767px) {
+      width: auto;
+      bottom: 60px;
+      padding: 20px;
+      flex-wrap: wrap;
+      background-color: transparent;
+
+      .item {
+        width: 90px;
+        height: 90px;
+        border: 1px solid #fed6bb;
+        overflow: hidden;
+
+        span.progressBar {
+
+          width: 90px;
+          height: 90px;
+          .inProgress {
+            background-color: rgb(253 174 120 / 50%);
+            width: 0%;
+            height: 90px;
+          }
+          
+        }
+
+        .loader-content {
+          img {
+            width: 30px;
+          }
+
+          h2 {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+
+      
+
+      .slick-prev {
+        display: block !important;
+        bottom: -70px;
+        top: unset;
+        left: 120px;
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        &::before {
+          font-size: 25px;
+          color: #08e5f8;
+          content: "\f053";
+          font-family: "Font Awesome 5 Pro";
+
+        }
+      }
+
+      .slick-next {
+        display: block !important;
+        bottom: -70px;
+        top: unset;
+        right: 130px;
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        &::before {
+          font-size: 25px;
+          color: #08e5f8;
+          content: "\f054";
+          font-family: "Font Awesome 5 Pro";
+
+        }
+      }
+      
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {  
+      bottom: 65px !important;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+
+    z-index: 99;
+
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+  }
+
+  .slick-prev {
+
+    left: 50px;
+
+    &::before {
+
+      content: "\f053";
+      font-family: "Font Awesome 5 Pro";
+      color: #fff !important;
+
+    }
+  }
+
+  .slick-next {
+    right: 50px;
+
+    &::before {
+
+      content: "\f054";
+      font-family: "Font Awesome 5 Pro";
+      color: #fff !important;
+
+    }
+
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+    list-style-type: none;
+    gap: 4px;
+  }
+
+  .slick-dots li {
+    margin: 0 0.25rem;
+  }
+
+  .slick-dots button {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 1px solid #000;
+    text-indent: -9999px;
+  }
+
+  .slick-dots li.slick-active button {
+    position: relative;
+    border-color: #fed6bb;
+  }
+
+  .slick-dots li.slick-active button::after {
+    width: 72%;
+    top: 2px;
+    left: 2px;
+    height: 73%;
+    border-radius: 50%;
+    content: 'gg';
+    background-color: #fed6bb;
+   
+    position: absolute;
+  }
+
+  @media (max-width:767px) {
+    margin-top: 56px;
+    
+    .slider-text-wrap {
+
+     justify-content: start !important;
+     padding-top: 130px;
+
+
+     
+    }
+
+  }
+
+  @media (min-width:992px) {
+.slick-dots {
+
+  display: none !important;
+}
+
+  }
+
+  @media (max-width:991px) {
+
+    .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
+  }
+
+  @media (min-width:2200px) {
+.slider-text-wrap {
+
+  h1 {
+    font-size: 200px !important;
+  }
+
+  p {
+    font-size:80px !important;
+
+  }
+}
+  }
+
+
+}
+
+.hero_banner .slick-prev:before,
+.hero_banner .slick-next:before {
+  color: black;
+}
+
+@keyframes progress {
+  from {
+    width: 0px;
+  }
+}
+
+to {
+  width: 80px;
+}

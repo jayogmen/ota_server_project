@@ -133,4 +133,12 @@ public class OTAController {
         }
         return ResponseEntity.ok(status);
     }
+
+    @GetMapping("/getArtifacts")
+    public ResponseEntity<Map<String, List<ArtifactInfo>>> getArtifacts() {
+        Map<String, List<ArtifactInfo>> artifacts = otaService.getArtifacts();
+        return ResponseEntity.ok(artifacts);
+    }   
+
 }
+

@@ -1,0 +1,101 @@
+Robot_ID,OTA_Version,Error_Type,State,Health_Status,Diagnostics_Data,Last_Updated
+Robot_1,Test Version,Minor Issue,Offline,Healthy,No Issues,2023-01-01
+Robot_2,Test Version,Critical Error,Active,Healthy,No Issues,2023-01-02
+Robot_3,Stable,No Error,Active,Healthy,No Issues,2023-01-03
+Robot_4,Beta Version,Minor Issue,Offline,Degraded,Network Issue,2023-01-04
+Robot_5,Augmentation Version,No Error,Offline,Unknown,No Issues,2023-01-05
+Robot_6,Test Version,Minor Issue,Under Maintenance,Degraded,Battery Low,2023-01-06
+Robot_7,Stable,No Error,Offline,Unknown,Network Issue,2023-01-07
+Robot_8,Beta Version,No Error,Under Maintenance,Unknown,Network Issue,2023-01-08
+Robot_9,Stable,No Error,Offline,Degraded,No Issues,2023-01-09
+Robot_10,Stable,Warning,Active,Unknown,Network Issue,2023-01-10
+Robot_11,Test Version,Warning,Idle,Unknown,Overheating,2023-01-11
+Robot_12,Stable,No Error,Active,Unknown,Overheating,2023-01-12
+Robot_13,Test Version,Minor Issue,Under Maintenance,Critical,Overheating,2023-01-13
+Robot_14,Stable,Minor Issue,Idle,Healthy,Network Issue,2023-01-14
+Robot_15,Stable,Critical Error,Under Maintenance,Unknown,Overheating,2023-01-15
+Robot_16,Test Version,No Error,Idle,Degraded,Network Issue,2023-01-16
+Robot_17,Stable,Critical Error,Offline,Unknown,Network Issue,2023-01-17
+Robot_18,Test Version,Minor Issue,Under Maintenance,Healthy,Battery Low,2023-01-18
+Robot_19,Beta Version,Minor Issue,Under Maintenance,Healthy,Overheating,2023-01-19
+Robot_20,Stable,Warning,Offline,Degraded,Network Issue,2023-01-20
+Robot_21,Augmentation Version,Minor Issue,Active,Unknown,No Issues,2023-01-21
+Robot_22,Augmentation Version,Minor Issue,Active,Unknown,Overheating,2023-01-22
+Robot_23,Stable,No Error,Under Maintenance,Critical,No Issues,2023-01-23
+Robot_24,Stable,Minor Issue,Under Maintenance,Healthy,Battery Low,2023-01-24
+Robot_25,Beta Version,Minor Issue,Active,Degraded,Overheating,2023-01-25
+Robot_26,Test Version,Warning,Offline,Healthy,No Issues,2023-01-26
+Robot_27,Augmentation Version,Critical Error,Idle,Critical,Overheating,2023-01-27
+Robot_28,Beta Version,No Error,Idle,Unknown,Overheating,2023-01-28
+Robot_29,Test Version,Critical Error,Active,Degraded,Network Issue,2023-01-29
+Robot_30,Stable,Warning,Under Maintenance,Unknown,Battery Low,2023-01-30
+Robot_31,Test Version,No Error,Active,Healthy,No Issues,2023-01-31
+Robot_32,Test Version,No Error,Offline,Healthy,Network Issue,2023-02-01
+Robot_33,Augmentation Version,Minor Issue,Offline,Healthy,Network Issue,2023-02-02
+Robot_34,Test Version,No Error,Active,Unknown,Network Issue,2023-02-03
+Robot_35,Stable,No Error,Offline,Healthy,Battery Low,2023-02-04
+Robot_36,Stable,Warning,Active,Degraded,Overheating,2023-02-05
+Robot_37,Augmentation Version,Warning,Active,Unknown,Network Issue,2023-02-06
+Robot_38,Beta Version,No Error,Idle,Healthy,No Issues,2023-02-07
+Robot_39,Stable,No Error,Idle,Critical,Overheating,2023-02-08
+Robot_40,Beta Version,Critical Error,Active,Unknown,Network Issue,2023-02-09
+Robot_41,Augmentation Version,No Error,Under Maintenance,Critical,Network Issue,2023-02-10
+Robot_42,Beta Version,Warning,Active,Critical,No Issues,2023-02-11
+Robot_43,Augmentation Version,No Error,Active,Unknown,Network Issue,2023-02-12
+Robot_44,Augmentation Version,No Error,Idle,Critical,Network Issue,2023-02-13
+Robot_45,Stable,No Error,Active,Degraded,Overheating,2023-02-14
+Robot_46,Augmentation Version,Warning,Offline,Unknown,No Issues,2023-02-15
+Robot_47,Beta Version,Minor Issue,Under Maintenance,Healthy,Network Issue,2023-02-16
+Robot_48,Test Version,Minor Issue,Active,Unknown,Network Issue,2023-02-17
+Robot_49,Stable,No Error,Offline,Degraded,Network Issue,2023-02-18
+Robot_50,Beta Version,Critical Error,Under Maintenance,Healthy,Battery Low,2023-02-19
+Robot_51,Augmentation Version,Minor Issue,Under Maintenance,Degraded,Network Issue,2023-02-20
+Robot_52,Stable,No Error,Active,Critical,No Issues,2023-02-21
+Robot_53,Augmentation Version,Warning,Active,Healthy,Battery Low,2023-02-22
+Robot_54,Beta Version,No Error,Under Maintenance,Critical,No Issues,2023-02-23
+Robot_55,Augmentation Version,Minor Issue,Active,Healthy,Network Issue,2023-02-24
+Robot_56,Stable,Minor Issue,Offline,Critical,Network Issue,2023-02-25
+Robot_57,Augmentation Version,Critical Error,Active,Unknown,Battery Low,2023-02-26
+Robot_58,Test Version,Minor Issue,Under Maintenance,Unknown,Battery Low,2023-02-27
+Robot_59,Beta Version,Warning,Offline,Unknown,No Issues,2023-02-28
+Robot_60,Beta Version,Minor Issue,Under Maintenance,Healthy,Battery Low,2023-03-01
+Robot_61,Augmentation Version,No Error,Active,Degraded,Network Issue,2023-03-02
+Robot_62,Stable,Warning,Idle,Critical,Battery Low,2023-03-03
+Robot_63,Test Version,No Error,Under Maintenance,Healthy,Battery Low,2023-03-04
+Robot_64,Test Version,Critical Error,Active,Unknown,No Issues,2023-03-05
+Robot_65,Beta Version,Critical Error,Under Maintenance,Degraded,No Issues,2023-03-06
+Robot_66,Augmentation Version,Warning,Offline,Healthy,Overheating,2023-03-07
+Robot_67,Test Version,No Error,Offline,Degraded,No Issues,2023-03-08
+Robot_68,Augmentation Version,Critical Error,Under Maintenance,Healthy,Network Issue,2023-03-09
+Robot_69,Beta Version,Minor Issue,Idle,Critical,Network Issue,2023-03-10
+Robot_70,Stable,Critical Error,Under Maintenance,Healthy,Battery Low,2023-03-11
+Robot_71,Beta Version,Warning,Under Maintenance,Critical,Battery Low,2023-03-12
+Robot_72,Augmentation Version,No Error,Under Maintenance,Unknown,Battery Low,2023-03-13
+Robot_73,Test Version,Minor Issue,Under Maintenance,Degraded,Overheating,2023-03-14
+Robot_74,Stable,Warning,Idle,Healthy,Overheating,2023-03-15
+Robot_75,Stable,Minor Issue,Under Maintenance,Unknown,Battery Low,2023-03-16
+Robot_76,Beta Version,Critical Error,Active,Critical,No Issues,2023-03-17
+Robot_77,Augmentation Version,Minor Issue,Idle,Degraded,No Issues,2023-03-18
+Robot_78,Test Version,Critical Error,Idle,Unknown,Network Issue,2023-03-19
+Robot_79,Stable,No Error,Offline,Degraded,Network Issue,2023-03-20
+Robot_80,Beta Version,Warning,Active,Degraded,Battery Low,2023-03-21
+Robot_81,Stable,Warning,Idle,Unknown,Network Issue,2023-03-22
+Robot_82,Test Version,Minor Issue,Under Maintenance,Degraded,Network Issue,2023-03-23
+Robot_83,Test Version,No Error,Active,Unknown,Battery Low,2023-03-24
+Robot_84,Stable,No Error,Under Maintenance,Healthy,Network Issue,2023-03-25
+Robot_85,Test Version,Minor Issue,Offline,Critical,Overheating,2023-03-26
+Robot_86,Beta Version,Minor Issue,Under Maintenance,Degraded,No Issues,2023-03-27
+Robot_87,Augmentation Version,Critical Error,Under Maintenance,Unknown,Overheating,2023-03-28
+Robot_88,Beta Version,Warning,Active,Healthy,Overheating,2023-03-29
+Robot_89,Beta Version,No Error,Under Maintenance,Healthy,Overheating,2023-03-30
+Robot_90,Beta Version,No Error,Under Maintenance,Degraded,No Issues,2023-03-31
+Robot_91,Stable,Critical Error,Idle,Degraded,Battery Low,2023-04-01
+Robot_92,Test Version,Critical Error,Offline,Unknown,No Issues,2023-04-02
+Robot_93,Beta Version,Critical Error,Idle,Degraded,Network Issue,2023-04-03
+Robot_94,Test Version,No Error,Under Maintenance,Critical,Network Issue,2023-04-04
+Robot_95,Augmentation Version,Warning,Idle,Unknown,Overheating,2023-04-05
+Robot_96,Augmentation Version,Minor Issue,Offline,Critical,Network Issue,2023-04-06
+Robot_97,Test Version,Minor Issue,Offline,Unknown,No Issues,2023-04-07
+Robot_98,Beta Version,No Error,Under Maintenance,Healthy,Overheating,2023-04-08
+Robot_99,Test Version,Minor Issue,Offline,Degraded,Network Issue,2023-04-09
+Robot_100,Augmentation Version,Minor Issue,Offline,Unknown,Network Issue,2023-04-10

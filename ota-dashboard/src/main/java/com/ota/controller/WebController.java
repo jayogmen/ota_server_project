@@ -12,9 +12,10 @@ public class WebController {
     @Autowired
     private DashboardService dashboardService;
 
-    @GetMapping("/")
+    @GetMapping("/ogmenrobotics")
     public String dashboard(Model model) {
         model.addAttribute("projects", dashboardService.getAllProjects());
-        return "dashboard";
+        model.addAttribute("artifacts", dashboardService.getArtifacts());
+        return "index";
     }
 }
