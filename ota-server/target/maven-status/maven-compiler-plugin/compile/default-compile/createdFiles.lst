@@ -1,0 +1,4 @@
+com/ota/service/OTAService.class
+com/ota/OTAApplication.class
+com/ota/controller/OTAController.class
+com/ota/config/ApplicationConfig.class

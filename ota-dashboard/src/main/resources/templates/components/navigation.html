@@ -1,0 +1,47 @@
+<nav th:fragment="nav" class="sidebar bg-dark text-white" id="sidebar">
+    <div class="container-fluid">
+        <div class="sidebar-header">
+            <h3 class="text-center">OGMEN ROBOTICS</h3>
+            <button id="sidebarToggle" class="btn btn-link d-md-none rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="index.html" id="overviewLink">
+                    <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="categories.html" id="categoriesLink">
+                    <i class="fa fa-cubes"></i>
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="updateTypes.html" id="updateTypesLink">
+                    <i class="fa fa-refresh"></i>
+                    <span>Update Types</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="robotHealth.html" id="robotHealthLink">
+                    <i class="fa fa-heartbeat"></i>
+                    <span>Robot Health</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="errorStatus.html" id="errorStatusLink">
+                    <i class="fa fa-exclamation-triangle"></i>
+                    <span>Error Status</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <img src="/images/ogmen-icon.png" alt="Ogmen Logo" class="logo" />
+        </div>
+    </div>
+</nav> 

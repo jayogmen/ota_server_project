@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>ORo - Robot Health Diagnostics</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="scss/style.css" rel="stylesheet" />
+    <script src="js/navigation.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Using the same sidebar structure as in index.html -->
+        <div th:replace="components/navigation :: nav"></div>
+
+        <div class="main-content flex-grow-1">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">Robot Health Diagnostics</a>
+                        <div class="ms-auto d-flex align-items-center">
+                            <span class="text-black me-3">User: <strong th:text="${username}">Admin</strong></span>
+                            <a href="#" class="text-black me-3">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container mt-4">
+                <!-- Real-time Health Overview -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0">Real-time Health Status</h5>
+                                <div class="btn-group">
+                                    <button class="btn btn-outline-primary active" data-filter="all">All Robots</button>
+                                    <button class="btn btn-outline-primary" data-filter="test">Test Version</button>
+                                    <button class="btn btn-outline-primary" data-filter="beta">Beta Version</button>
+                                    <button class="btn btn-outline-primary" data-filter="ogmen">Ogmen Version</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="health-grid">
+                                    <div th:each="robot : ${robotHealth}" class="health-card" 
+                                         th:data-category="${robot.category}">
+                                        <div class="health-header">
+                                            <i class="fas fa-robot"></i>
+                                            <h4 th:text="${robot.name}">Robot Name</h4>
+                                            <span th:class="'status-indicator ' + ${robot.status}"></span>
+                                        </div>
+                                        <div class="health-metrics">
+                                            <div class="metric">
+                                                <label>Battery</label>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                         th:style="'width: ' + ${robot.battery} + '%'"
+                                                         th:text="${robot.battery} + '%'">75%</div>
+                                                </div>
+                                            </div>
+                                            <div class="metric">
+                                                <label>CPU Usage</label>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                         th:style="'width: ' + ${robot.cpu} + '%'"
+                                                         th:text="${robot.cpu} + '%'">45%</div>
+                                                </div>
+                                            </div>
+                                            <div class="metric">
+                                                <label>Memory Usage</label>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                         th:style="'width: ' + ${robot.memory} + '%'"
+                                                         th:text="${robot.memory} + '%'">60%</div>
+                                                </div>
+                                            </div>
+                                            <div class="metric">
+                                                <label>Network Strength</label>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                         th:style="'width: ' + ${robot.network} + '%'"
+                                                         th:text="${robot.network} + '%'">85%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="health-alerts">
+                                            <h6>Recent Alerts</h6>
+                                            <ul class="alert-list">
+                                                <li th:each="alert : ${robot.alerts}"
+                                                    th:class="${alert.severity}">
+                                                    <span th:text="${alert.message}">Alert message</span>
+                                                    <small th:text="${alert.timestamp}">2024-03-20 14:30</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Analytics -->
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Health Trends</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="healthTrendsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Alert Distribution</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="alertDistributionChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/robot-health.js"></script>
+</body>
+</html> 

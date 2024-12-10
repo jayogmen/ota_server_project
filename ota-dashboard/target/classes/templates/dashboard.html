@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>OTA Dashboard</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}"/>
+    <style>
+        .status-card {
+            transition: all 0.3s ease;
+        }
+        .status-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <span class="navbar-brand">OTA Dashboard</span>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Project Overview -->
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Projects Overview</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row" th:each="project : ${projects}">
+                            <div class="col-md-12 mb-4">
+                                <h6 th:text="${project.key}"></h6>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3" th:each="artifact : ${project.value}">
+                                        <div class="card status-card">
+                                            <div class="card-body">
+                                                <h6 class="card-subtitle mb-2 text-muted" 
+                                                    th:text="${artifact.updateType}"></h6>
+                                                <p class="card-text">
+                                                    Version: <span th:text="${artifact.version}"></span><br/>
+                                                    Updated: <span th:text="${artifact.timestamp}"></span>
+                                                </p>
+                                                <button class="btn btn-sm btn-primary"
+                                                        onclick="viewDetails(this)"
+                                                        th:data-project="${project.key}"
+                                                        th:data-version="${artifact.version}">
+                                                    View Details
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Details Modal -->
+    <div class="modal fade" id="detailsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <pre id="detailsContent"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/webjars/jquery/3.6.4/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js}"></script>
+    <script>
+        function viewDetails(button) {
+            const project = button.getAttribute('data-project');
+            const version = button.getAttribute('data-version');
+            
+            fetch(`/api/status/all/${project}/${version}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('detailsContent').textContent = 
+                        JSON.stringify(data, null, 2);
+                    new bootstrap.Modal(document.getElementById('detailsModal')).show();
+                });
+        }
+    </script>
+</body>
+</html>

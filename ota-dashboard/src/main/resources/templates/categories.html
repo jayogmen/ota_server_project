@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>ORo - Categories Overview</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="scss/style.css" rel="stylesheet" />
+    <script src="js/navigation.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar - Using existing sidebar structure -->
+        <div th:replace="components/navigation :: nav"></div>
+
+        <div class="main-content flex-grow-1">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">Categories</a>
+                        <div class="ms-auto d-flex align-items-center">
+                            <span class="text-black me-3">User: <strong th:text="${username}">Admin</strong></span>
+                            <a href="#" class="text-black me-3">Logout</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container mt-4">
+                <!-- Robot Categories Section -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Robot Categories</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Test Version Robots -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="category-card">
+                                            <div class="category-icon">
+                                                <i class="fas fa-flask"></i>
+                                            </div>
+                                            <h4>Test Version Robots</h4>
+                                            <ul class="category-list">
+                                                <li>Development Test Units</li>
+                                                <li>QA Testing Robots</li>
+                                                <li>Prototype Models</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Beta Version Robots -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="category-card">
+                                            <div class="category-icon">
+                                                <i class="fas fa-robot"></i>
+                                            </div>
+                                            <h4>Beta Version Robots</h4>
+                                            <ul class="category-list">
+                                                <li>Beta Test Units</li>
+                                                <li>Pre-release Models</li>
+                                                <li>Field Trial Units</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Ogmen Categories Version -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="category-card">
+                                            <div class="category-icon">
+                                                <i class="fas fa-layer-group"></i>
+                                            </div>
+                                            <h4>Ogmen Categories Version</h4>
+                                            <ul class="category-list">
+                                                <li>Minimal Version
+                                                    <small class="d-block text-muted">Basic functionality and features</small>
+                                                </li>
+                                                <li>Medium Version
+                                                    <small class="d-block text-muted">Enhanced capabilities and sensors</small>
+                                                </li>
+                                                <li>Pro Version
+                                                    <small class="d-block text-muted">Advanced features and AI capabilities</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <!-- Update Types Section -->
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <h5 class="mb-4">Update Categories</h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Update Type</th>
+                                                        <th>Description</th>
+                                                        <th>Applicable To</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr th:each="update : ${updateTypes}">
+                                                        <td>Full Image</td>
+                                                        <td>Complete system image update</td>
+                                                        <td>All Units</td>
+                                                        <td><span class="badge bg-success">Active</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Component</td>
+                                                        <td>Individual component updates</td>
+                                                        <td>Production Units</td>
+                                                        <td><span class="badge bg-primary">Active</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Configuration</td>
+                                                        <td>System configuration updates</td>
+                                                        <td>All Units</td>
+                                                        <td><span class="badge bg-info">Active</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dashboard-data.js"></script>
+</body>
+</html> 
